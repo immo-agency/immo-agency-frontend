@@ -6,9 +6,10 @@ export default function Home() {
 
   useEffect(() => {
 
-    fetch('http://127.0.0.1:3000/')
+    fetch('http://127.0.0.1:3000/properties')
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         setProperties(data);
       })
       .catch(error => {
