@@ -83,7 +83,7 @@ const Login= () => {
 
       <div className='box py-4 mt-5'>
       <h2>Connexion</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='box_form' onSubmit={handleSubmit}>
       {error && (
           <div className="alert alert-danger" role="alert">
             {error}
@@ -92,6 +92,7 @@ const Login= () => {
         <label htmlFor="email">Email :</label>
           <div className='inputBox mb-3'>
               <input
+                  className='inputBox_input'
                   type="email"
                   id="email"
                   placeholder='Email'
@@ -103,6 +104,7 @@ const Login= () => {
           <label htmlFor="password">Mot de passe :</label>
           <div className='inputBox mb-3'>
               <input
+                  className='inputBox_input'
                   type="password"
                   id="password"
                   placeholder='Mot de passe'

@@ -1,0 +1,13 @@
+$primary-color : #eae9e4;
+$secondary-color : #53389E;
+$tertiary-color : rgba(134, 46, 111, 0.469);
+
+@import './partials/main';
+@import './partials/header';
+@import './partials/footer';
+
+
+body{
+    background-color: $primary-color;
+}
+

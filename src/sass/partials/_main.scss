@@ -1,0 +1,19 @@
+@import "./form";
+
+main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+    
+        .box {
+        position: relative;
+        width: 380px;
+        background-color: $secondary-color;
+        padding: 25px;
+        border-radius: 10px;
+        &_form {
+              @include form
+        }   
+    }   
+}

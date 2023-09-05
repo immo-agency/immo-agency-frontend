@@ -1,0 +1,76 @@
+@import '../mixins/button';
+
+@mixin form {
+    .inputBox {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px;
+        &_input {
+            position: relative;
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 10px 5px;
+        }
+        #toggleBtn {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            width: 34px;
+            height: 34px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #toggleBtn::before {
+            content: '\f06e';
+            font-family: fontAwesome; 
+        }
+        #toggleBtn.hide::before {
+            content: '\f070';
+        }
+    }
+    .validation {
+        background-color: rgba(134, 46, 111, 0.469);
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px;
+        &_list {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            li {
+                position: relative;
+                list-style: none;
+                font-size: 0.90em;
+                transition: 0.5s;
+                color: $primary-color;
+            }
+            li.valid {
+                color: #0f0;
+            }
+            li.valid::before {
+                content: '\f00c';
+                color: #0f0;
+            }
+            li::before {
+                content:'\f192';
+                color: $primary-color;
+                width: 20px;
+                height: 10px;
+                font-family: fontAwesome;
+                display: inline-flex;
+            }
+        }
+    }
+    @include button($tertiary-color)
+}

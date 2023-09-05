@@ -149,7 +149,7 @@ const Registrer= () => {
 
         <div className='box py-4 mt-5'>
             <h2>Inscription</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='box_form' onSubmit={handleSubmit}>
             {error && (
                 <div className="alert alert-danger" role="alert">
                   {error}
@@ -158,6 +158,7 @@ const Registrer= () => {
             <label htmlFor="username">Nom d'utilisateur :</label>
                 <div className='inputBox mb-3'>
                     <input
+                        className='inputBox_input'
                         type="text"
                         minLength={3}
                         maxLength={25}
@@ -172,6 +173,7 @@ const Registrer= () => {
                 <label htmlFor="email">Email :</label>
                 <div className='inputBox mb-3'>
                     <input
+                        className='inputBox_input'
                         type="email"
                         minLength={3}
                         maxLength={30}
@@ -186,6 +188,7 @@ const Registrer= () => {
                 <label htmlFor="password">Mot de passe :</label>
                 <div className='inputBox mb-3'>
                     <input
+                        className='inputBox_input'
                         type="password"
                         minLength={8}
                         maxLength={50}
@@ -207,7 +210,7 @@ const Registrer= () => {
                     <li id='length'>8 caractére minimum</li>
                   </ul>
                 </div>
-                <button type="submit" aria-label="S'inscrire" disabled={!isPasswordValid} className='btn btn-primary mt-3'>S'inscrire</button>
+                <button type="submit" aria-label="S'inscrire" disabled={!isPasswordValid} className='mt-3'>S'inscrire</button>
             </form>
         </div>
     );
