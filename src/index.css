@@ -1,0 +1,58 @@
+
+.box .inputBox #toggleBtn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .inputBox #toggleBtn::before{
+  content: '\f06e';
+  font-family: fontAwesome;
+}
+.box .inputBox #toggleBtn.hide::before{
+  content: '\f070';
+}
+.validation{
+  background-color: rgba(134, 46, 111, 0.469);
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px;
+}
+.validation ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.validation_list {
+  margin: 0;
+}
+.validation ul li {
+  position: relative;
+  list-style: none;
+  font-size: 0.90em;
+  transition: 0.5s;
+}
+.validation ul li.valid{
+  color: #0f0;
+}
+.validation ul li::before{
+  content:'\f192';
+  color: #fff;
+  width: 20px;
+  height: 10px;
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+.validation ul li.valid::before{
+  content: '\f00c';
+  color: #0f0;
+}

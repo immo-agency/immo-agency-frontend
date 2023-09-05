@@ -1,0 +1,43 @@
+$primary-color : #eae9e4;
+$primary-secondary : #53389E;
+
+
+body{
+    background-color: $primary-color;
+}
+
+div#root {
+    nav {
+        background-color: $primary-secondary;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+    }
+    div.box {
+        position: relative;
+        width: 380px;
+        background-color: $primary-secondary;
+        padding: 25px;
+        border-radius: 10px;
+        form {
+              .inputBox {
+                position: relative;
+                width: 100%;
+                background-color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 0 5px 10px;
+                input {
+                    position: relative;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    padding: 10px 5px;
+                }
+            }
+        }   
+    }
+}
