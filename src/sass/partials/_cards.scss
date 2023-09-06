@@ -1,4 +1,10 @@
-/* Styles pour une carte d'annonce immobilière */
+
+
+.card-container {
+  display: flex; /* Afficher les cartes en ligne */
+  flex-wrap: wrap; /* Permettre le passage à la ligne lorsque l'espace est insuffisant */
+  justify-content: space-between; /* Espacement égal entre les cartes */
+}
 .card {
   width: 250px; /* Largeur fixe */
   height: auto; /* Hauteur ajustée au contenu */

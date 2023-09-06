@@ -18,8 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>Home</h1>
+    <div className='card-container'>
       {properties.map((property) => (
         <PropertyCard key={property.id} property={property} />
       ))}
