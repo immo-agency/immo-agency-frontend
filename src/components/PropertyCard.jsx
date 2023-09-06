@@ -1,11 +1,8 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 const PropertyCard = ({ property }) => {
-  console.log(property);
-  
   return (
-    <div className="card" style={{ width: '18rem' }}>
+    <div className="card">
       {/* <img src={property.image_url} className="card-img-top" alt="property image" /> */}
       <div className="card-body">
         <h5 className="card-title">{property.name}</h5>
@@ -23,4 +20,3 @@ const PropertyCard = ({ property }) => {
 };
 
 export default PropertyCard;
-
