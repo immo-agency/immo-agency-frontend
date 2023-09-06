@@ -14,7 +14,6 @@ const PropertyCard = ({ property }) => {
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Price: {property.price} €</li>
         <li className="list-group-item">Location: {property.city_id}</li>
-        <li className="list-group-item">Available: {property.is_purchased}</li>
       </ul>
       <div className="card-body">
         <a href={`/properties/${property.id}`} className="card-link">See More</a>
