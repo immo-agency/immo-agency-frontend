@@ -33,6 +33,11 @@ export default function Navbar() {
                 Accueil
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/new_property">
+                Ajouter Propriété
+              </Link>
+            </li>
             {user.isLogged ? (
               <>
                 <li>

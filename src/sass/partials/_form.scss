@@ -1,6 +1,7 @@
 @import '../mixins/button';
 
-@mixin form {
+@mixin form($form_width) {
+    min-width: $form_width;
     .inputBox {
         position: relative;
         width: 100%;
