@@ -1,9 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 
-const PropertyCard = ({ property }) => {
-  console.log(property);
-  
+const PropertyCard = ({ property }) => {  
   return (
     <div className="card" style={{ width: '18rem' }}>
       {/* <img src={property.image_url} className="card-img-top" alt="property image" /> */}

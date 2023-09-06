@@ -8,12 +8,11 @@ main {
     
         .box {
         position: relative;
-        width: 380px;
         background-color: $secondary-color;
         padding: 25px;
         border-radius: 10px;
         &_form {
-              @include form
+              @include form(40vh)
         }   
     }   
 }
