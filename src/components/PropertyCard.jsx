@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PropertyCard = ({ property }) => {
+
   return (
     <div className="card">
       {/* <img src={property.image_url} className="card-img-top" alt="property image" /> */}
