@@ -11,11 +11,11 @@ const PropertyCard = ({ property }) => {
       
       <ul className="list">
 
-        <li className="list_item">Price: {property.prix} €</li>
-        <li className="list_item">Location: {property.city_name}</li>
+        <li className="list_item">Prix: {property.prix} €</li>
+        <li className="list_item">Lieu: {property.city_name}</li>
       </ul>
       </div>
-      <a href={`/properties/${property.id}`} className="card_link">See More</a>
+      <a href={`/properties/${property.id}`} className="card_link">Voir plus</a>
     </div>
   );
 };
