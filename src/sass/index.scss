@@ -8,6 +8,10 @@ $tertiary-color : rgba(134, 46, 111, 0.469);
 @import './partials/cards';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: 'Varela';
+    src: url(/src/sass/fonts/VarelaRound-Regular.ttf);
+}
 
 body{
     background-color: $primary-color;
