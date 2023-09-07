@@ -1,4 +1,8 @@
 @import "./form";
+@import "./cards";
+
+
+@import "./banner";
 
 main {
         display: flex;
@@ -18,5 +22,15 @@ main {
         &_form {
               @include form(40vh)
         }   
-    }   
+    }
+    .card-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-around;
+        align-items: center;
+        @include card() 
+    }  
+    .banner{
+        @include banner()
+    }
 }
