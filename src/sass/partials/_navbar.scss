@@ -1,3 +1,56 @@
 @mixin navbar {
     background-color: $secondary-color;
-}
+    font-family: 'Varela';
+    
+    .active-link {
+      background-color: rgba(255, 255, 255, 1) !important; 
+      color: $secondary-color !important;
+      text-decoration: underline !important;
+      border-radius: 15px !important;
+    }
+  
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 65px;
+      width: 100%;
+  
+      .nav-brand {
+        font-size: 25px;
+        text-decoration: none;
+        color: aliceblue;
+        margin-bottom: 12px;
+        margin-left: 160px;
+      }
+  
+      .nav-list {
+        list-style: none;
+        margin-right: 160px;
+        display: flex;
+        align-items: center;
+  
+        .nav-item {
+          margin-right: 10px;
+          margin-top: 6px;
+          font-size: 19px;
+        }
+        
+        a {
+          text-decoration: none;
+          color: white;
+          transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, padding 0.5s ease-in-out;
+          background-color: rgba(255, 255, 255, 0);
+          padding: 10px 10px;
+          border-radius: 15px;
+        }
+
+        a:hover {
+          background-color: rgba(255, 255, 255, 1); 
+          color: $secondary-color;
+          text-decoration: underline;
+          border-radius: 15px;
+        }
+      }
+    }
+  }

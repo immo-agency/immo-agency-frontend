@@ -1,66 +1,55 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { useAtom } from "jotai"
-import { userAtom } from "../atom"
-import Logout from "./Logout"
-
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { userAtom } from '../atom';
+import Logout from './Logout';
 
 export default function Navbar() {
+  const [user] = useAtom(userAtom);
+  const location = useLocation();
 
-    const [user] = useAtom(userAtom)
+  const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      setBgPosition({ x, y });
+      // console.log(e)
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+
 
   return (
-    <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Immo Agency
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarColor01">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Accueil
-              </Link>
+    <nav className='nav'>
+      <div className='nav-background'  style={{ backgroundPosition: `${bgPosition.x}% ${bgPosition.y}%` }}></div>
+      <div className='nav-container'>
+        <a href="#" className='nav-brand'>Immo Agency</a>
+        <ul className='nav-list'>
+          <li className='nav-item'>
+            <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Accueil</Link>
+          </li>
+          {user.isLogged ? (
+            <li className='nav-item'>
+              <Logout />
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/new_property">
-                Ajouter Propriété
-              </Link>
-            </li>
-            {user.isLogged ? (
-              <>
-                <li>
-                  <Logout />
-                </li>
-              </>
-            ) : (
-              <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/login">
-                    Connexion
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/register">
-                    Inscription
-                  </Link>
-                </li>
-              </>
-            )}
-          </ul>
-        </div>
+          ) : (
+            <>
+              <li className='nav-item'>
+                <Link to="/login" className={location.pathname === '/login' ? 'active-link' : ''}>Connexion/S'inscrire</Link>
+              </li>
+            </>
+          )}
+        </ul>
       </div>
+      <div className="cursor"></div>
     </nav>
-  )
+  );
 }
