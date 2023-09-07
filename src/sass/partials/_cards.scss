@@ -1,52 +1,48 @@
 
+@mixin card() {
+  .card {
+    width: 20rem; 
+    height: auto; 
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    &_img {
+      width: 100%;
+      height: auto; 
+    }
+    &_body {
+      padding: 0.8rem;
+      &_text {
+        font-size: 0.875rem;
+        color: #666; 
+        margin-bottom: 0.25rem;
+      }
+    }
+    &_title {
+      font-size: 1rem; 
+      font-weight: bold;
+      color: #333; 
+      margin-bottom: 0.15rem; 
+    }
+    &_link {
+      display: block;
+      margin-top: 0.25rem; 
+      text-decoration: none;
+      color: #007bff; 
+      font-weight: bold;
+    }
+    .list {
+      border-top: 1px solid #e0e0e0;
+      padding: 15px 15px 0 15px;
+      &_item {
+        font-size: 0.875rem;
+        color: #666; 
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
 
-.card-container {
-  display: flex; /* Afficher les cartes en ligne */
-  flex-wrap: wrap; /* Permettre le passage à la ligne lorsque l'espace est insuffisant */
-  justify-content: space-between; /* Espacement égal entre les cartes */
-}
-.card {
-  width: 250px; /* Largeur fixe */
-  height: auto; /* Hauteur ajustée au contenu */
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  overflow: hidden; /* Pour contenir les éléments enfants */
-}
-
-.card-img-top {
-  width: 100%;
-  height: auto; /* L'image conserve son ratio hauteur/largeur */
-}
-
-.card-body {
-  padding: 0.5rem; /* Réduction de la marge intérieure */
-}
-
-.card-title {
-  font-size: 1rem; /* Réduction de la taille du titre */
-  font-weight: bold;
-  color: #333; /* Couleur du titre */
-  margin-bottom: 0.15rem; /* Réduction de la marge inférieure */
-}
-
-.card-text,
-.list-group-item {
-  font-size: 0.875rem;
-  color: #666; /* Couleur du texte */
-  margin-bottom: 0.25rem; /* Réduction de la marge inférieure */
-}
-
-.list-group {
-  border-top: 1px solid #e0e0e0;
-}
-
-.card-link {
-  display: block;
-  margin-top: 0.25rem; /* Réduction de l'espacement vers le lien */
-  text-decoration: none;
-  color: #007bff; /* Couleur du lien */
-  font-weight: bold;
-}
