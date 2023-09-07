@@ -146,7 +146,7 @@ const Registrer= () => {
     };
 
     return (
-
+      <section>
         <div className='box'>
             <h2>Inscription</h2>
             <form className='box_form' onSubmit={handleSubmit}>
@@ -213,6 +213,7 @@ const Registrer= () => {
                 <button type="submit" aria-label="S'inscrire" disabled={!isPasswordValid} className='form-btn'>S'inscrire</button>
             </form>
         </div>
+      </section>
     );
 }
 

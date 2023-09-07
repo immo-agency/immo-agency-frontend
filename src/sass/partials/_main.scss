@@ -5,17 +5,20 @@
 @import "./banner";
 
 main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 50vh;
+    padding: 50px 0;
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+        }
     
         .box {
         position: relative;
         background-color: $secondary-color;
         padding: 25px;
         border-radius: 10px;
-        margin-top: 10vh;
+        margin: 5vh;
         h2 {
             color: #fff;
         }

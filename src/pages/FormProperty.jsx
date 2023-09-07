@@ -71,64 +71,66 @@ export default function FormProperty() {
       };
 
   return (
-    <div className='box'>
-      <h2>Ajouter votre Location</h2>
-      <form className='box_form' onSubmit={handleSubmit}>
-      {error && (
-          <div className="alert" role="alert">
-            {error}
-          </div>
-        )}
-        <label htmlFor="title">Titre :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="title"
-                  id="title"
-                  placeholder='Titre'
-                  value={titre}
-                  onChange={handleTitleChange}
-                  required
-              />
-          </div>
-          <label htmlFor="description">Description :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="description"
-                  id="description"
-                  placeholder='Description'
-                  value={description}
-                  onChange={handleDescriptionChange}
-                  required
-              />
-          </div>
-          <label htmlFor="location">Location :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="location"
-                  id="location"
-                  placeholder='Location'
-                  value={city_name}
-                  onChange={handleLocationChange}
-                  required
-              />
-          </div>
-          <label htmlFor="price">Prix :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="price"
-                  id="price"
-                  placeholder='Prix'
-                  value={prix}
-                  onChange={handlePriceChange}
-                  required
-              />
-          </div>
-          <button type="submit" aria-label="Ajouter une Location" className='form-btn'>Ajouter</button>
-      </form>
-  </div>
+    <section>
+      <div className='box'>
+        <h2>Ajouter votre Location</h2>
+        <form className='box_form' onSubmit={handleSubmit}>
+        {error && (
+            <div className="alert" role="alert">
+              {error}
+            </div>
+          )}
+          <label htmlFor="title">Titre :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="title"
+                    id="title"
+                    placeholder='Titre'
+                    value={titre}
+                    onChange={handleTitleChange}
+                    required
+                />
+            </div>
+            <label htmlFor="description">Description :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="description"
+                    id="description"
+                    placeholder='Description'
+                    value={description}
+                    onChange={handleDescriptionChange}
+                    required
+                />
+            </div>
+            <label htmlFor="location">Location :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="location"
+                    id="location"
+                    placeholder='Location'
+                    value={city_name}
+                    onChange={handleLocationChange}
+                    required
+                />
+            </div>
+            <label htmlFor="price">Prix :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="price"
+                    id="price"
+                    placeholder='Prix'
+                    value={prix}
+                    onChange={handlePriceChange}
+                    required
+                />
+            </div>
+            <button type="submit" aria-label="Ajouter une Location" className='form-btn'>Ajouter</button>
+        </form>
+    </div>
+  </section>
   )
 }

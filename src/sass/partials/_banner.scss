@@ -3,18 +3,28 @@
     width: auto;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   &_text {
-    color: #fff;
-    position: absolute;
-    font-size: 2em;
-    top: 3em; 
-    left: 3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    padding: 2em;
+    &_title {
+      color: $secondary-color;
+      text-align: center;
+      margin: 0;
+    }
+    &_description {
+      font-size: 1.7em;
+      text-align: center;
+      margin: 0;
+    }
   }
   &_img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    overflow: hidden;
+    width: 65%;
+    height:100%;
+    border-radius: 0 60% 3% 3%;
+    border-top: $secondary-color 3px solid;
+    border-right: $secondary-color 3px solid;
+    object-fit: contain;
   }
 }

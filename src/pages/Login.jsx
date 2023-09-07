@@ -81,45 +81,46 @@ const Login= () => {
     };
 
     return (
-
-      <div className='box'>
-      <h2>Connexion</h2>
-      <form className='box_form' onSubmit={handleSubmit}>
-      {error && (
-          <div className="alert" role="alert">
-            {error}
-          </div>
-        )}
-        <label htmlFor="email">Email :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="email"
-                  id="email"
-                  placeholder='Email'
-                  value={email}
-                  onChange={handleEmailChange}
-                  required
-              />
-          </div>
-          <label htmlFor="password">Mot de passe :</label>
-          <div className='inputBox'>
-              <input
-                  className='inputBox_input'
-                  type="password"
-                  id="password"
-                  placeholder='Mot de passe'
-                  value={password}
-                  onChange={handlePasswordChange}
-                  required
-              />
-              <span id='toggleBtn' onClick={handlePasswordHide}></span>
-          </div>
-          <button type="submit" className='form-btn'>Se connecter</button>
-          <p className='txt-noaccount'>Vous n'avez pas encore de compte ?</p>
-          <Link to='/register' className='link-login'>Inscrivez-vous !</Link>
-      </form>
-  </div>
+      <section>
+        <div className='box'>
+        <h2>Connexion</h2>
+        <form className='box_form' onSubmit={handleSubmit}>
+        {error && (
+            <div className="alert" role="alert">
+              {error}
+            </div>
+          )}
+          <label htmlFor="email">Email :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="email"
+                    id="email"
+                    placeholder='Email'
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                />
+            </div>
+            <label htmlFor="password">Mot de passe :</label>
+            <div className='inputBox'>
+                <input
+                    className='inputBox_input'
+                    type="password"
+                    id="password"
+                    placeholder='Mot de passe'
+                    value={password}
+                    onChange={handlePasswordChange}
+                    required
+                />
+                <span id='toggleBtn' onClick={handlePasswordHide}></span>
+            </div>
+            <button type="submit" className='form-btn'>Se connecter</button>
+            <p className='txt-noaccount'>Vous n'avez pas encore de compte ?</p>
+            <Link to='/register' className='link-login'>Inscrivez-vous !</Link>
+        </form>
+    </div>
+  </section>
     );
 }
 
