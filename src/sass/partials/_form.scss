@@ -92,5 +92,13 @@
     .form-btn {
         margin-top: 12px;
     }
-    @include button($tertiary-color)
+    @include button($tertiary-color);
+    
+    .txt-noaccount {
+        color: white;
+    }
+
+    .link-login {
+        color: aliceblue;
+    }
 }
