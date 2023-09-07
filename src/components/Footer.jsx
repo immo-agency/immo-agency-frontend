@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div class="container">
-          <div class="a_propos">
+    <div className="container">
+          <div className="a_propos">
             <hr></hr>
               <p><span>A propos</span></p>
               <a href="#">
@@ -16,7 +16,7 @@ export default function Footer() {
                   <p>Données et confidentialité</p>
               </a>
           </div>
-          <div class="nos_hebergements">
+          <div className="nos_hebergements">
             <hr></hr>
               <p><span>Nos hébergements</span></p>
               <a href="#">
@@ -26,7 +26,7 @@ export default function Footer() {
                   <p>Soumettre votre Location</p>
               </a>
           </div>
-          <div class="Assist">
+          <div className="Assist">
             <hr></hr>
               <p><span>Assistance</span></p>
               <a href="#">
