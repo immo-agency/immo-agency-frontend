@@ -1,11 +1,12 @@
 
 @mixin card() {
   .card {
-    width: 20rem; 
-    height: auto; 
+    font-family: 'Varela';
+    width: 15rem; 
+    height: 31rem;
+    width: 15rem; 
     background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
+    border-radius: 2px 2px 2px 2px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
     margin: 20px;
     overflow: hidden;
@@ -21,24 +22,28 @@
         margin-bottom: 0.25rem;
       }
     }
-    &_title {
-      font-size: 1rem; 
-      font-weight: bold;
-      color: #333; 
-      margin-bottom: 0.15rem; 
+    &_body_title {
+      background-color: $secondary-color;
+      color: white;
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 0.15rem;
+      margin-top: -7px; 
     }
     &_link {
       display: block;
-      margin-top: 0.25rem; 
       text-decoration: none;
-      color: #007bff; 
+      color: $secondary-color; 
       font-weight: bold;
+      text-align: right;
+      padding-right: 30px;
     }
+
     .list {
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid $secondary-color;
       padding: 15px 15px 0 15px;
       &_item {
-        font-size: 0.875rem;
+        font-size: 1rem;
         color: #666; 
         margin-bottom: 0.25rem;
       }
