@@ -40,13 +40,15 @@ export default function Navbar() {
           <li className={`nav-item ${showMenu ? 'show' : ''}`}>
             <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}>Accueil</Link>
           </li>
-          <li className={`nav-item ${showMenu ? 'show' : ''}`}>
-            <Link to="/new_property" className={location.pathname === '/new_property' ? 'active-link' : ''}>Ajouter location</Link>
-          </li>
           {user.isLogged ? (
-            <li className={`nav-item ${showMenu ? 'show' : ''}`}>
-              <Logout />
-            </li>
+            <>
+              <li className={`nav-item ${showMenu ? 'show' : ''}`}>
+              <Link to="/new_property" className={location.pathname === '/new_property' ? 'active-link' : ''}>Ajouter location</Link>
+              </li>
+              <li className={`nav-item ${showMenu ? 'show' : ''}`}>
+                <Logout />
+              </li>
+            </>
           ) : (
             <>
               <li className={`nav-item ${showMenu ? 'show' : ''}`}>
