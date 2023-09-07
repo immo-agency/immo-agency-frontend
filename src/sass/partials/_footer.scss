@@ -1,3 +1,46 @@
-footer {
-
+footer                                 
+{
+    display: flex;
+    background-color: #F2F2F2;
+    max-width: 100%;
+    justify-content: space-between;
+}
+footer span
+{
+    font-weight: bold;
+}
+footer a
+{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover
+{
+    color: $secondary-color;
+}
+.container
+{
+    display: flex;
+    width: 100%;
+    padding: 2% 3% 3% 3%;
+    justify-content: space-around;
+}
+.a_propos
+{
+    flex-direction: column;
+    margin-right: 18%;
+}
+.nos_hebergements
+{
+    flex-direction: column;
+    margin-right: 18%;
+}
+.assist
+{
+    flex-direction: column;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
