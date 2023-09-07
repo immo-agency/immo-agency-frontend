@@ -24,5 +24,14 @@
       text-align: center;
       padding: 10px 0;
     }
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .a_propos,.nos_hebergements {
+      margin: 0 0 20px 0;
+    }
   }
   
