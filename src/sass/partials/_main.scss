@@ -2,6 +2,8 @@
 @import "./cards";
 
 
+@import "./banner";
+
 main {
         display: flex;
         justify-content: center;
@@ -26,5 +28,8 @@ main {
         justify-content: space-around;
         align-items: center;
         @include card() 
-    }   
+    }  
+    .banner{
+        @include banner()
+    }
 }
