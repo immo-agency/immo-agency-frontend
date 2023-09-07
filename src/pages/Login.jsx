@@ -115,6 +115,8 @@ const Login= () => {
               <span id='toggleBtn' onClick={handlePasswordHide}></span>
           </div>
           <button type="submit" className='form-btn'>S'inscrire</button>
+          <p>Vous n'avez pas encore de compte ?</p>
+          <Link to='/register'>Inscrivez-vous !</Link>
       </form>
   </div>
     );
