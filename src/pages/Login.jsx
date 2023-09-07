@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAtom } from 'jotai';
 import { userAtom } from '../atom';
 import { useNavigate } from "react-router-dom";
@@ -114,7 +115,9 @@ const Login= () => {
               />
               <span id='toggleBtn' onClick={handlePasswordHide}></span>
           </div>
-          <button type="submit" className='form-btn'>S'inscrire</button>
+          <button type="submit" className='form-btn'>Se connecter</button>
+          <p className='txt-noaccount'>Vous n'avez pas encore de compte ?</p>
+          <Link to='/register' className='link-login'>Inscrivez-vous !</Link>
       </form>
   </div>
     );
