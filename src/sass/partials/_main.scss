@@ -11,6 +11,9 @@ main {
         background-color: $secondary-color;
         padding: 25px;
         border-radius: 10px;
+        h2 {
+            color: #fff;
+        }
         &_form {
               @include form(40vh)
         }   

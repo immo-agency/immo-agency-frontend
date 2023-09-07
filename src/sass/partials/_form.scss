@@ -1,7 +1,19 @@
 @import '../mixins/button';
 
 @mixin form($form_width) {
-    min-width: $form_width;
+    width: $form_width;
+    .alert {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+    label{
+        color: #fff;
+    }
     .inputBox {
         position: relative;
         width: 100%;
@@ -9,12 +21,16 @@
         padding: 5px;
         border-radius: 5px;
         box-shadow: 0 5px 10px;
+        margin-bottom: 18px;
         &_input {
             position: relative;
-            width: 100%;
             outline: none;
             border: none;
-            padding: 10px 5px;
+            padding: 11px 5px;
+            font-size: 1rem;
+            line-height: 1.5;
+            background-color: #fff;
+            background-clip: padding-box;
         }
         #toggleBtn {
             position: absolute;
@@ -72,6 +88,9 @@
                 display: inline-flex;
             }
         }
+    }
+    .form-btn {
+        margin-top: 12px;
     }
     @include button($tertiary-color)
 }

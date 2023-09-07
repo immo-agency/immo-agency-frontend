@@ -81,16 +81,16 @@ const Login= () => {
 
     return (
 
-      <div className='box py-4 mt-5'>
+      <div className='box'>
       <h2>Connexion</h2>
       <form className='box_form' onSubmit={handleSubmit}>
       {error && (
-          <div className="alert alert-danger" role="alert">
+          <div className="alert" role="alert">
             {error}
           </div>
         )}
         <label htmlFor="email">Email :</label>
-          <div className='inputBox mb-3'>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="email"
@@ -102,7 +102,7 @@ const Login= () => {
               />
           </div>
           <label htmlFor="password">Mot de passe :</label>
-          <div className='inputBox mb-3'>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="password"
@@ -114,7 +114,7 @@ const Login= () => {
               />
               <span id='toggleBtn' onClick={handlePasswordHide}></span>
           </div>
-          <button type="submit" className='btn btn-primary mt-3'>S'inscrire</button>
+          <button type="submit" className='form-btn'>S'inscrire</button>
       </form>
   </div>
     );

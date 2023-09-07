@@ -71,16 +71,16 @@ export default function FormProperty() {
       };
 
   return (
-    <div className='box py-4 mt-5'>
+    <div className='box'>
       <h2>Ajouter votre Location</h2>
       <form className='box_form' onSubmit={handleSubmit}>
       {error && (
-          <div className="alert alert-danger" role="alert">
+          <div className="alert" role="alert">
             {error}
           </div>
         )}
-        <label htmlFor="title">titre :</label>
-          <div className='inputBox mb-3'>
+        <label htmlFor="title">Titre :</label>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="title"
@@ -91,8 +91,8 @@ export default function FormProperty() {
                   required
               />
           </div>
-          <label htmlFor="description">description :</label>
-          <div className='inputBox mb-3'>
+          <label htmlFor="description">Description :</label>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="description"
@@ -104,7 +104,7 @@ export default function FormProperty() {
               />
           </div>
           <label htmlFor="location">Location :</label>
-          <div className='inputBox mb-3'>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="location"
@@ -115,8 +115,8 @@ export default function FormProperty() {
                   required
               />
           </div>
-          <label htmlFor="price">prix :</label>
-          <div className='inputBox mb-3'>
+          <label htmlFor="price">Prix :</label>
+          <div className='inputBox'>
               <input
                   className='inputBox_input'
                   type="price"
@@ -127,7 +127,7 @@ export default function FormProperty() {
                   required
               />
           </div>
-          <button type="submit" aria-label="Ajouter une Location" className='mt-3'>Ajouter</button>
+          <button type="submit" aria-label="Ajouter une Location" className='form-btn'>Ajouter</button>
       </form>
   </div>
   )
