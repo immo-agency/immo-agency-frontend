@@ -1,0 +1,28 @@
+@media screen and (max-width: 1010px) {
+    .nav-item {
+      display: none;
+    }
+
+    .btn-nav.show {
+      display: inline-block;
+    }
+
+    .nav-item.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      background-color: $secondary-color;
+      width: 100%;
+    }
+
+    .nav-item.show .nav-item {
+      margin-right: 0;
+    }
+
+    .nav-list.show a {
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+  
