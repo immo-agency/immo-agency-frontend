@@ -1,29 +1,30 @@
 @media screen and (max-width: 1010px) {
-    .nav-item {
-      display: none;
-    }
+  .nav-item {
+    display: none;
+  }
+  .btn-nav{
+    opacity: 1;
+  }
+  .btn-nav.show {
+    display: inline-block;
+  }
 
-    .btn-nav.show {
-      display: inline-block;
-    }
+  .nav-item.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $secondary-color;
+    width: 100%;
+  }
 
-    .nav-item.show {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      background-color: $secondary-color;
-      width: 100%;
-    }
+  .nav-item.show .nav-item {
+    margin-right: 0;
+  }
 
-    .nav-item.show .nav-item {
-      margin-right: 0;
-    }
-
-    .nav-list.show a {
-      text-align: center;
-      padding: 10px 0;
-    }
+  .nav-list.show a {
+    text-align: center;
+  }
+  
     .container {
       flex-direction: column;
       justify-content: center;
@@ -32,6 +33,26 @@
     }
     .a_propos,.nos_hebergements {
       margin: 0 0 20px 0;
+    }
+    .nav-list {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+      position: absolute;
+      padding: 0;
+      top: 65px;
+      width: 100%;
+      height: 5vh;
+      z-index: 2;
+      .nav-item.show{
+        margin: 0;
+        position: relative;
+        padding: 1vh 0;
+        .active-link{
+          padding: 12px;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
   

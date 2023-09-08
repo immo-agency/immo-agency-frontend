@@ -33,7 +33,6 @@
         margin: 0 auto;
   
         .nav-item {
-          margin-right: 10px;
           align-items: center;
           font-size: 19px;
           @include button(rgba(223, 38, 38, 0.729))
@@ -60,11 +59,11 @@
         background-color: transparent;
         border: none;
         margin-right: 40px;
+        opacity: 1;
       }
 
       .icon {
-        height: 45px;
+        height: 40px;
       }
-
     }
 }
